@@ -1,0 +1,211 @@
+body {
+  background: hsl(30, 54%, 90%);
+}
+
+ul {
+  list-style: none;
+}
+
+h3,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: hsl(14, 45%, 36%);
+}
+
+img {
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.hero-bg {
+  max-width: 800px;
+  margin: 40px auto;
+  display: grid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Young Serif', serif;
+  font-weight: 400;
+  margin: 10px 0;
+  color: hsl(24, 5%, 18%);
+}
+
+p {
+  color: hsl(30, 10%, 34%);
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+li {
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 44%);
+}
+
+/* Prep */
+
+.prep-container {
+  background: hsl(30, 54%, 98%);
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.prep-content {
+  position: relative;
+  padding: 15px;
+}
+
+.prep-content h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: hsl(332, 51%, 52%);
+}
+
+.prep-content li span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  margin-right: 5px;
+  color: hsl(24, 50%, 28%);
+}
+
+.prep-content li {
+  display: flex;
+  align-items: center;
+  color: hsl(24, 50%, 28%);
+}
+
+.prep-content ul li:nth-child(1),
+.prep-content ul li:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.prep-content li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: hsl(24, 5%, 18%);
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+}
+
+/* Ingredients */
+
+.ingre-content {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.ingre-content li + li {
+  margin-top: 10px;
+}
+
+.ingre-content li {
+  display: flex;
+  align-items: center;
+}
+
+.ingre-content li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: hsl(24, 5%, 18%);
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+}
+
+/* Instructions */
+.intru-content {
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.intru-content li {
+  font-weight: 600;
+  color: hsl(14, 45%, 36%);
+}
+
+.intru-content li + li {
+  margin-top: 10px;
+}
+
+.intru-content li span {
+  font-weight: 400;
+  color: hsl(30, 10%, 34%);
+}
+
+/* Nutrition */
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+}
+
+.ficha h3 {
+  display: inline-block;
+  font-size: 1rem;
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+  width: 50%;
+  margin-left: 2.5rem;
+  padding-block: .6rem;
+}
+
+.ficha span {
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
+}
+
+.ficha li + li  {
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
+
+@media (max-width: 800px) {
+  .hero-bg {
+    max-width: 600px;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-bg {
+    max-width: 500px;
+  }
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .container {
+    max-width: 300px;
+  }
+  img {
+    max-width: 100%;
+  }
+}
