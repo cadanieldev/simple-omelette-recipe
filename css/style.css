@@ -1,211 +1,234 @@
-body {
-  background: hsl(30, 54%, 90%);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  /* Fontes */
+  --font-outfit: "Outfit", sans-serif;
+  --font-young-serif: "Young Serif", serif;
+
+  /* Cores */
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
 }
 
-ul {
-  list-style: none;
-}
-
-h3,
-h2 {
-  padding: 0;
+* {
   margin: 0;
-}
-
-h2 {
-  font-family: "Young Serif", serif;
-  font-weight: 400;
-  color: hsl(14, 45%, 36%);
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
 img {
-  margin: 30px 0;
-  border-radius: 10px;
+  max-width: 100%;
 }
 
-.hero-bg {
-  max-width: 800px;
-  margin: 40px auto;
-  display: grid;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  background: #fff;
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--Brown-800);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem;
+  background: var(--Stone-100);
+  font-family: "Outfit", sans-serif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
-  margin: 0 auto;
+  width: 44.6rem;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--White);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-family: 'Young Serif', serif;
+.banner img {
+  border-radius: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+/* HERO */
+
+.hero h1 {
+  font-size: 2.3rem;
+  color: var(--Stone-900);
+}
+
+.hero p {
+  font-family: var(--font-outfit);
+  color: var(--Stone-600);
   font-weight: 400;
-  margin: 10px 0;
-  color: hsl(24, 5%, 18%);
+  margin: 1rem 0;
 }
 
-p {
-  color: hsl(30, 10%, 34%);
-  margin-top: 10px;
-  margin-bottom: 0px;
+.preparation {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.875rem;
+  background: var(--Rose-50);
+  margin: 1.5rem 0;
+}
+
+.preparation h3 {
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  color: var(--Rose-800);
+}
+
+.preparation .prep-list {
+  color: var(--Rose-800);
+  margin-left: 1.5rem;
   font-size: 1rem;
-  font-family: 'Outfit', sans-serif;
 }
 
-li {
-  font-family: "Outfit", sans-serif;
-  color: hsl(30, 10%, 44%);
+.prep-list li + li {
+  margin-top: 1rem;
 }
 
-/* Prep */
-
-.prep-container {
-  background: hsl(30, 54%, 98%);
-  border-radius: 5px;
-  margin: 20px 0;
+.prep-list li p {
+  margin-left: 0.875rem;
 }
 
-.prep-content {
-  position: relative;
-  padding: 15px;
+/* MAIN CONTENT */
+
+/* INGREDIENTS */
+
+main section {
+  margin-bottom: 1;
+  border-bottom: 1px solid var(--Stone-100);
 }
 
-.prep-content h3 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  color: hsl(332, 51%, 52%);
+main section:last-child {
+  border-bottom: none;
 }
 
-.prep-content li span {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  margin-right: 5px;
-  color: hsl(24, 50%, 28%);
-}
-
-.prep-content li {
+.ingredients .ingre-list {
   display: flex;
-  align-items: center;
-  color: hsl(24, 50%, 28%);
-}
-
-.prep-content ul li:nth-child(1),
-.prep-content ul li:nth-child(2) {
-  margin-bottom: 10px;
-}
-
-.prep-content li::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: hsl(24, 5%, 18%);
-  display: inline-block;
-  position: absolute;
-  left: 20px;
-}
-
-/* Ingredients */
-
-.ingre-content {
-  position: relative;
-  margin-bottom: 20px;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
-}
-
-.ingre-content li + li {
-  margin-top: 10px;
-}
-
-.ingre-content li {
-  display: flex;
-  align-items: center;
-}
-
-.ingre-content li::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: hsl(24, 5%, 18%);
-  display: inline-block;
-  position: absolute;
-  left: 5px;
-}
-
-/* Instructions */
-.intru-content {
-  margin-bottom: 20px;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
-}
-
-.intru-content li {
-  font-weight: 600;
-  color: hsl(14, 45%, 36%);
-}
-
-.intru-content li + li {
-  margin-top: 10px;
-}
-
-.intru-content li span {
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--Stone-600);
   font-weight: 400;
-  color: hsl(30, 10%, 34%);
+  padding: 1rem;
+  margin-left: 0.475rem;
+}
+
+.ingre-list p {
+  margin-left: 1rem;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  margin-top: 1rem;
+}
+.instructions .instru-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--Brown-800);
+  font-weight: 600;
+}
+
+.instru-list p {
+  color: var(--Stone-600);
+  font-weight: 400;
+  margin-left: 1rem;
 }
 
 /* Nutrition */
+.nutrition {
+  margin-top: 1rem;
+}
 
-.ficha {
+.nutrition p {
+  font-weight: 400;
+  margin: 1rem 0;
+  color: var(--Stone-600);
+}
+
+.nutri-list {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.ficha h3 {
-  display: inline-block;
-  font-size: 1rem;
-  color: hsl(30, 10%, 34%);
+.nutri-list li {
+  padding: .475rem 0;
+  display: flex;
+  border-bottom: 1px solid var(--Stone-100);
+}
+
+.nutri-list li:last-child {
+  border-bottom: none;
+}
+
+.nutri-list li h3 {
   font-weight: 400;
+  font-size: 1rem;
   width: 50%;
-  margin-left: 2.5rem;
-  padding-block: .6rem;
+  margin-left: 1rem;
+  color: var(--Stone-600);
 }
 
-.ficha span {
-  color: hsl(14, 45%, 36%);
+.nutri-list span {
   font-weight: 600;
+  color: var(--Brown-800);
 }
 
-.ficha li + li  {
-  border-top: 1px solid hsl(30, 18%, 87%);
-}
-
-@media (max-width: 800px) {
-  .hero-bg {
-    max-width: 600px;
-  }
-
+@media screen and (max-width: 600px) {
   .container {
-    max-width: 500px;
+    padding: 0;
   }
-}
 
-@media (max-width: 550px) {
-  .hero-bg {
-    max-width: 500px;
+  .banner img {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
   }
-  .container {
-    max-width: 400px;
+
+  .hero h1 {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-size: 2rem;
   }
+
+  .hero p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .preparation {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .content {
+    padding: 0 2rem;
+  }
+  
 }
 
 @media (max-width: 450px) {
-
-  .container {
-    max-width: 350px;
-  }
-  img {
-    max-width: 100%;
+  .hero h1 {
+    font-size: 1.5rem;
   }
 }
